@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="article">
+  <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+  <h1>{{ page.title }}</h1>
+  {% if page.source_url %}
+  <p class="source-note">迁移自 <a href="{{ page.source_url }}">博客园原文</a>。</p>
+  {% endif %}
+  <div class="article-body">
+    {{ content }}
+  </div>
+  <a class="back-link" href="{{ '/' | relative_url }}">Back to posts</a>
+</article>

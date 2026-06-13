@@ -1,0 +1,14 @@
+title: h40y
+description: A quiet place for notes, code, and thinking.
+url: "https://h40y.github.io"
+timezone: Asia/Shanghai
+future: true
+permalink: /posts/:slug.html
+excerpt_separator: "<!-- excerpt -->"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

@@ -1,24 +1,22 @@
+---
+layout:
+---
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <title>h40y</title>
-    <link>https://h40y.github.io/</link>
-    <description>A quiet place for notes, code, and thinking.</description>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ '/' | absolute_url }}</link>
+    <description>{{ site.description | xml_escape }}</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% for post in site.posts %}
     <item>
-      <title>Hello, dark</title>
-      <link>https://h40y.github.io/posts/hello-dark.html</link>
-      <guid>https://h40y.github.io/posts/hello-dark.html</guid>
-      <pubDate>Sat, 13 Jun 2026 00:00:00 +0800</pubDate>
-      <description>给这个站点留一条安静的起点。</description>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ post.url | absolute_url }}</link>
+      <guid>{{ post.url | absolute_url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description>{{ post.summary | default: post.description | xml_escape }}</description>
     </item>
-    <item>
-      <title>Minimal stack</title>
-      <link>https://h40y.github.io/posts/minimal-stack.html</link>
-      <guid>https://h40y.github.io/posts/minimal-stack.html</guid>
-      <pubDate>Sat, 13 Jun 2026 00:00:00 +0800</pubDate>
-      <description>一个适合 GitHub Pages 的轻博客结构。</description>
-    </item>
+    {% endfor %}
   </channel>
 </rss>
