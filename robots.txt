@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://h40y.github.io/sitemap.xml
