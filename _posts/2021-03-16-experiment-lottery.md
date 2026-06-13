@@ -62,7 +62,7 @@ source_url: "https://www.cnblogs.com/h40y/p/14543868.html"
 <span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> IndexHandle(tornado.web.RequestHandler):
     </span><span style="color: rgba(0, 0, 255, 1)">def</span> get(self, *args, **<span style="color: rgba(0, 0, 0, 1)">kwarfs):
         self.write(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">hello tornado!</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">)
- 
+
 </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 创建Application对象</span>
 app = tornado.web.Application([(r<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">/</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">, IndexHandle)])
 
@@ -88,7 +88,7 @@ static_path </span>= os.path.join(os.path.dirname(<span style="color: rgba(128, 
 <pre>name_list = self.request.files.get(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">nameList</span><span style="color: rgba(128, 0, 0, 1)">"</span>)[0][<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">body</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">].decode().split()
 </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 注意这个0，获取到的数据是一个列表里装着字典</span></pre>
 </div>
-<p>　　<span style="background-color: rgba(255, 255, 255, 1); font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px">get()返回的字典里面有很多诸如文件名之类的信息，需要的只有body中的正文，decode()用于将二进制转为字符串，split()切分为数组便于处理。</span></p>
+<p>　　get()返回的字典里面有很多诸如文件名之类的信息，需要的只有body中的正文，decode()用于将二进制转为字符串，split()切分为数组便于处理。</p>
 <p>　　基础的框架搭建好了，要着手准备最重要的核心功能——抽奖了。</p>
 
 <p>　　<span style="font-size: 18pt"><strong>Part3 抽奖</strong></span></p>
